@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use SEOMeta;
+use OpenGraph;
+use Twitter;
 
 class HomeController extends Controller
 {
@@ -13,7 +16,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -23,6 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+		SEOMeta::setTitle('Follador - Contabilidade',false);
+        SEOMeta::setDescription('Contabilidade em Curitiba');
+		SEOMeta::setKeywords('Contabilidade em Curitiba');
+		SEOMeta::setKeywords('Contabilidade em Curitiba')->addKeyword('Contabilidade Curitiba')->addKeyword('Contador Curitiba')->addKeyword('Contador em Curitiba');
+        return view('index');
     }
 }

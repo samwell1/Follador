@@ -16,6 +16,7 @@ $(document).ready(function(){
 
      
     //animated header class
+	/*
     $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
      //console.log(scroll);
@@ -25,8 +26,9 @@ $(document).ready(function(){
     } else {
         //console.log('a');
         $(".navigation").removeClass("animated");
-    }});
+    }});*/
 
+/*
     $('#countdown_dashboard').countDown({
         targetDate: {
             'day':      30,
@@ -37,7 +39,7 @@ $(document).ready(function(){
             'sec':      59,
         },
         omitWeeks: true
-    });
+});*/
 
     $(".about-slider").owlCarousel(
         {
@@ -75,14 +77,14 @@ $(document).ready(function(){
         },
         messages: {
             name: {
-                required: "Please enter Your Name",
-                minlength: "Your name must consist of at least 2 characters"
+                required: "Por favor, digite seu nome",
+                minlength: "Seu nome deve conter pelo menos 2 caracteres"
             },
             message: {
-                required: "Please Write Something",
-                minlength: "Your message must consist of at least 2 characters"
+                required: "Por favor, digite uma mensagem",
+                minlength: "Sua mensagem deve conter pelo menos 2 caracteres"
             },
-            email: "Please enter a valid email address"
+            email: "Por favor, entre com um email válido"
         },
         submitHandler: function(form) {
             $(form).ajaxSubmit({
